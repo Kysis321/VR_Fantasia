@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class OneDestroy : MonoBehaviour
 {
+    public GameObject topPlatform;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +17,11 @@ public class OneDestroy : MonoBehaviour
     {
         
     }
+
+    public void SessionStart()
+    {
+        Destroy(topPlatform);
+
+    }
+
 }

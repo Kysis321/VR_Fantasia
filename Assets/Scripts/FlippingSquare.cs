@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class FlippingSquare : MonoBehaviour
 {
-    public GameObject squareOne;
-    public GameObject squareTwo;
-    public GameObject squareThree;
-    public GameObject squareFour;
+    public List<GameObject> squares;
 
-    public ArrayList squares;
+    public List<GameObject> instantiatePoints;
 
 
 
@@ -27,4 +24,24 @@ public class FlippingSquare : MonoBehaviour
     {
         
     }
+
+    void StartSquares()
+
+    {
+        foreach (GameObject i in instantiatePoints)
+        {
+            int r = Random.Range(0,5);
+            Instantiate(squares[r], instantiatePoints);
+
+        }
+
+        
+
+
+
+
+    }
+
+
+
 }
